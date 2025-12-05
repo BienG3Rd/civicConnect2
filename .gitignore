@@ -4,11 +4,11 @@
 node_modules/
 .pnp
 .pnp.js
+
+# Package manager files
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
-
-# Ignore all package manager lock files
 **/package-lock.json
 **/yarn.lock
 **/pnpm-lock.yaml
@@ -19,9 +19,9 @@ coverage/
 
 # Next.js
 .vscode/
-.next/
-out/
-build/
+**/.next/
+**/out/
+**/build/
 
 # Production
 build
@@ -65,7 +65,15 @@ yarn-error.log*
 /backend/.env
 /backend/.env.*
 
-# Frontend specific
+# Environment files (frontend and backend)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+**/.env
+**/.env.*
+!**/.env.example
 
 # Cache
 .cache/
